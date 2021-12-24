@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Binar/front-end-next"
+		},
+		{
+			"path": "../resume-cli"
+		}
+	],
+	"settings": {}
+}
