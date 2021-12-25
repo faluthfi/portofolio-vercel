@@ -5,9 +5,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#202225',
+        primary: '#2f3136',
         dsfont: '#b9bbbe',
-        dschosen: 'hsl(216, 4%, 95%)'
+        dschosen: '#393c42',
+        dsbg:'#36393f',
+        dshovertxt:'#dcddde',
+        dshoverbg:'#33363c'
+
       },
       keyframes: {
         'fade-in-down': {
@@ -35,6 +39,9 @@ module.exports = {
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
     },
+    fontFamily:{
+      'roboto':'Roboto Mono,sans-serif',
+    }
   },
   variants: {
     extend: {},
