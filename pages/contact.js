@@ -30,14 +30,14 @@ export default function Home() {
 
   return (
     <Fragment>
-      <div className='m-auto mt-auto h-full min-w-3/4  justify-center align-middle items-center'>
+      <div className='m-auto mt-auto min-w-3/4  justify-center align-middle items-center bg-dsbg w-full text-dsfont'>
         <div className='mb-5 font-semibold text-2xl sm:text-md'>
           <h1 className='text-center'>
             Feel free to contact me at <a href='mailto:faikar.al@gmail.com' className='hover:text-blue-700'>faikar.al@gmail.com</a> or use the form below
           </h1>
         </div>
         <div className='flex justify-center w-full'>
-          <form className='grid grid-cols-1 grid-rows-6 gap-10 w-3/4 text-2xl sm:text-xl sm:w-5/6' onSubmit={handleSubmit}>
+          <form className='grid grid-cols-1 grid-rows-6 gap-10 w-1/2 text-2xl sm:text-xl sm:w-5/6' onSubmit={handleSubmit}>
             <div className=' flex flex-col border-2 p-4   border-blue-900'>
               <h2 className='flex p-2'>
                 Name<h2 className='text-red-700'>*</h2>
@@ -68,6 +68,7 @@ export default function Home() {
           </form>
         </div>
       </div>
+
     </Fragment>
   )
 }

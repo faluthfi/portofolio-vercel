@@ -2,7 +2,7 @@ export default function indexIcon({ path, link,tooltip }) {
     return (
             <div className="group my-5 mx-10 sm:mx-2 flex flex-col justify-between items-center">
                 <a href={link}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 rounded-full fill-black p-4 hover:fill-gray-600  hover:border-gray-600 hover:cursor-pointer hover:scale-95 transition duration-300 ease-in-out" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 rounded-full fill-gray-100 p-4 hover:fill-gray-300  hover:border-gray-600 hover:cursor-pointer hover:scale-95 transition duration-300 ease-in-out" viewBox="0 0 24 24">
                         <path d={path} />
                     </svg>
                 </a>
