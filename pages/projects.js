@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="flex flex-col  w-[80%] gap-4 min-h-1/2 text-dsfont xl:w-full ">
           <div className="border-b-2 grid grid-cols-3 grid-rows-5 h-3/4 gap-x-4 p-4 border-2 border-blue-800 mdlg:grid-rows-5 mdlg:grid-cols-1 mdlg:gap-y-4 sm:auto-rows-max">
             <div className=" row-span-5 mdlg:col-span-1 sm:row-span-2">
-              <img src="/Web1.png" alt="" className="h-full mdlg:w-full object-contain object-center bg-gray-700 border-2 border-blue-800" />
+              <img src="/project-1.png" alt="" className="h-full mdlg:w-full object-contain object-center bg-gray-700 border-2 border-blue-800" />
             </div>
             <div className=" col-span-2 row-span-1 border-2 border-blue-800">
               <h1 className="text-white text-4xl font-bold sm:text-xl">Bootcamp Project</h1>
