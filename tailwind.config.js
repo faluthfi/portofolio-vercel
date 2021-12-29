@@ -34,6 +34,8 @@ module.exports = {
       // => @media (max-width: 1279px) { ... }
       lg: { max: "1023px" },
       // => @media (max-width: 1023px) { ... }
+      mdlg: { max: "950px" },
+      // => @media (max-width: 950px) { ... }
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }
       sm: { max: "639px" },

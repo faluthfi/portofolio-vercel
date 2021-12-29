@@ -16,12 +16,12 @@ export default function Home() {
 
   return (
     <Fragment>
-      <div className='h-full flex w-full justify-center  items-center bg-dsbg text-dsfont'>
+      <div className='h-full min-h-screen flex w-full justify-center  items-center bg-dsbg text-dsfont'>
         <div className='flex flex-col justify-center items-center  max-h-2/4 max-w-2/4 sm:w-screen md:w-screen animate-fade-in-down'>
           <h1 className='mb-4 font-bold text-white text-6xl'>Faikar Achmad Luthfi</h1>
-          <h2 className='mb-4 font-semibold text-white text-4xl'>Software Developer</h2>
+          <h2 className='mb-4 font-semibold text-white text-4xl'>Web Developer</h2>
           <div className='font-normal mx-5 flex items-center justify-center text-center w-1/2'>
-            <p>I'm a web developer based on Bandung,Indonesia, mainly i used <strong className='font-bold text-white text-lg'>Javascript</strong> as my primary programming language.Currently my go to techstack for Client Side is <strong className='font-bold text-white text-lg'>ReactJS</strong>  or <strong className='font-bold text-white text-lg'>NextJS</strong>  depending on the use cases, and for the Server side i use <strong className='font-bold text-white text-lg'>NodeJS</strong> and <strong className='font-bold text-white text-lg'>ExpressJS</strong> with <strong className='font-bold text-white text-lg'>PostgreSQL</strong> for the database.However I'm not I'm also eager to learn other framework so that i can use the most optimal frameworks for certain use cases in my future projects.</p>
+            <p>I'm a web developer based on Bandung,Indonesia, I used <strong className='font-medium text-white text-lg'>Javascript</strong> as my primary programming language. Currently my preferred techstack for Front End is <strong className='font-medium text-white text-lg'>ReactJS</strong>  or <strong className='font-medium text-white text-lg'>NextJS</strong>  depending on the use cases, and for the Back end I use <strong className='font-medium text-white text-lg'>NodeJS</strong> and <strong className='font-medium text-white text-lg'>ExpressJS</strong> with <strong className='font-medium text-white text-lg'>PostgreSQL</strong> for the database.However I'm not I'm also eager to learn other framework so that I can use the most optimal frameworks for certain use cases in my future projects.</p>
           </div>
           <div className='flex flex-row mt-10'>
             <IndexIcon path={github} link={'https://github.com/faluthfi'} tooltip={'Github'} />
