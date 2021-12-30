@@ -18,14 +18,14 @@ export default function Home() {
     <Fragment>
       <div className='h-full min-h-screen flex w-full justify-center  items-center bg-dsbg text-dsfont'>
         <div className='flex flex-col justify-center items-center  max-h-2/4 max-w-2/4 sm:w-screen md:w-screen animate-fade-in-down'>
-          <h1 className='mb-4 font-bold text-white text-6xl sm:text-3xl sm:text-center sm:mt-10'>Faikar Achmad Luthfi</h1>
-          <h2 className='mb-4 font-semibold text-white text-4xl sm:text-xl'>Web Developer</h2>
-          <div className='font-normal mx-5 flex items-center justify-center text-center w-1/2 sm:w-screen sm:text-center sm:break-words'>
-            <p>I'm a <strong className='font-medium text-white text-lg'>Javascript</strong> web developer based in Bandung,Indonesia. Currently my preferred techstack for Front End is <strong className='font-medium text-white text-lg'>ReactJS</strong>  or <strong className='font-medium text-white text-lg'>NextJS</strong>  depending on the use cases, and for the Back end I use <strong className='font-medium text-white text-lg'>NodeJS</strong> and <strong className='font-medium text-white text-lg'>ExpressJS</strong> with <strong className='font-medium text-white text-lg'>PostgreSQL</strong> for the database. However, I'm not limited to the aforementioned frameworks since I'm also eager to learn other framework so that I can use the most optimal frameworks for certain use cases in my future projects.</p>
+          <h1 className='mb-10 font-bold text-white text-6xl sm:text-3xl sm:text-center sm:mt-10 sm:mx-16'>Faikar Achmad Luthfi</h1>
+          <h2 className='mb-10 font-semibold text-white text-4xl sm:text-xl'>Web Developer</h2>
+          <div className='font-normal mx-5 flex items-center justify-center text-center w-1/2 sm:w-[80%] sm:tracking-tight sm:text-justify sm:break-words text-lg sm:text-sm'>
+            <p>I'm a <strong className='font-medium text-white'>Javascript</strong> web developer based in Bandung,Indonesia. Currently my preferred techstack for Front End is <strong className='font-medium text-white'>ReactJS</strong>  or <strong className='font-medium text-white'>NextJS</strong>  depending on the use cases, and for the Back end I use <strong className='font-medium text-white'>NodeJS</strong> and <strong className='font-medium text-white'>ExpressJS</strong> with <strong className='font-medium text-white'>PostgreSQL</strong> for the database. However, I'm not limited to the aforementioned frameworks since I'm also eager to learn other framework so that I can use the most optimal frameworks for certain use cases in my future projects.</p>
           </div>
           <div className='flex flex-row mt-10'>
-            <IndexIcon path={github} link={'https://github.com/faluthfi'} tooltip={'Github'} />
-            <IndexIcon path={linkedin} link={'https://www.linkedin.com/in/faikar-achmad-luthfi'} tooltip={'LinkedIn'} />
+            <IndexIcon path={github} link={'https://github.com/faluthfi'} tooltip={'Github'} color={'black'}/>
+            <IndexIcon path={linkedin} link={'https://www.linkedin.com/in/faikar-achmad-luthfi'} tooltip={'LinkedIn'} color={'linkd'}/>
             <div className="group my-5 mx-10 sm:mx-2 flex flex-col justify-between items-center">
               <a onClick={openModal}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 rounded-full p-4 fill-gray-100 hover:fill-gray-300  hover:border-gray-600 hover:cursor-pointer hover:scale-95 transition duration-300 ease-in-out" viewBox="0 0 24 24">
