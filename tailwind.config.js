@@ -10,7 +10,8 @@ module.exports = {
         dschosen: '#393c42',
         dsbg:'#36393f',
         dshovertxt:'#dcddde',
-        dshoverbg:'#33363c'
+        dshoverbg:'#33363c',
+        linkd:'#0077b5',
 
       },
       keyframes: {
@@ -27,6 +28,9 @@ module.exports = {
       },
       animation: {
         'fade-in-down': 'fade-in-down 1s ease-out',
+      },
+      gridTemplateRows:{
+        '12':'repeat(12, minmax(0, 1fr))'
       }
     },
     screens: {
