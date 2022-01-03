@@ -3,7 +3,8 @@
 export default function handler(req, res) {
   res.status(200).json(
     {
-      "user env":process.env.MAIL_USER
+      "user env":process.env.MAIL_USER,
+      "user env":process.env.MAIL_DESTINATION
   }
   )
 }
