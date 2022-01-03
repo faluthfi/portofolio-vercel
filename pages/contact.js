@@ -47,6 +47,7 @@ export default function Home() {
         if (res.status !== 200) {
           throw new Error("Something went Wrong!!")
         }
+        console.log(res)
         return res
       })
       .then((res) => {

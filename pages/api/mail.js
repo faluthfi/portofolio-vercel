@@ -16,7 +16,7 @@ export default async (req, res) => {
     });
 
     //Make sure the method of the request is post
-    if (req.method !== 'POST' || req.headers.host != process.env.WEB_URL) {
+    if (req.method !== 'POST') {
         return res.status(400).json({ 'status': 'not okay' })
     }
 
