@@ -41,14 +41,11 @@ export default async (req, res) => {
                 address: process.env.MAIL_USER
             },
             to: process.env.MAIL_DESTINATION,
-            subject: `${subject} |sent by ${name}`,
-            text: message,
-            html:
-                <>
-                    <div>{message}</div>
-                    <div>{`Contact at ${email}`}</div>
-                </>
-        }
+            subject: `${subject} | sent by ${name}`,
+            text: message + " | Sent from: " + email,
+            html:`<div>${message}</div><p>Sent by:${email}</p>`
+
+        };
 
         await new Promise((resolve, reject) => {
             // send mail
@@ -67,7 +64,7 @@ export default async (req, res) => {
         res.status(200).json({ status: "OK" });
     }
     catch (err) {
-        res.status(400).json({
+        return res.status(400).json({
             status: 'Error',
             message: err
         })
