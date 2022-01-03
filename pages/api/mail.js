@@ -6,8 +6,8 @@ export default async (req, res) => {
 
     //Setting up Transponder for connecting to the email
     const transporter = nodemailer.createTransport({
-        port: process.env.MAIL_PORT,
-        host: process.env.MAIL_URL,
+        port: 465,
+        host: 'smtp.gmail.com',
         auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASSWORD
