@@ -11,6 +11,13 @@ const initialData = {
 export default function Home() {
   const [isLoading, setLoading] = useState(false)
   const [data, setData] = useState(initialData)
+  const [isOpen, setIsOpen] = useState(false)
+  const [isError, setIsError] = useState(false)
+  const [errMsg, setErrMsg] = useState('')
+
+  function closeModal() {
+    setIsOpen(false)
+  }
 
   const handleSubmit = async (e) => {
 
@@ -51,14 +58,13 @@ export default function Home() {
         return res
       })
       .then((res) => {
-        alert('success sending message')
+        setIsOpen(true)
         setLoading(false)
-        console.log(res)
         setData(initialData)
       })
-      .catch((err, res) => {
-        alert(err)
-        console.log(res)
+      .catch(async (err, res) => {
+        await setErrMsg(`${err}, ${res.status}`)
+        setIsOpen(true)
         setLoading(false)
       })
   }
@@ -96,21 +102,28 @@ export default function Home() {
               <h2 className='p-2 text-xl font-bold text-dshovertxt flex sm:text-md'>
                 Message<h2 className='text-red-700'>*</h2>
               </h2>
-              <textarea type="text" name="message" value={data.message} className='h-full text-xl row-span-3 resize-none px-1 rounded-md bg-dsform' onChange={handleChange} required/>
+              <textarea type="text" name="message" value={data.message} className='h-full text-xl row-span-3 resize-none px-1 rounded-md bg-dsform' onChange={handleChange} required />
             </div>
             <div className='flex flex-col  p-6  items-center'>
               <button type="submit" name="submit" className='border-dsform border-2 shadow-md w-1/4 sm:w-1/2 rounded-lg py-3  bg-dshoverbg font-bold hover:scale-95'>Submit</button>
             </div>
           </form>
         </div>
-      </div>
 
-      {/* Modal for Loading */}
-      <Transition appear show={isLoading} as={Fragment}>
+      </div>
+      {/* Loading Overlay */}
+      {
+        isLoading &&
+        <div className='flex items-center justify-center h-full w-screen bg-black opacity-80 z-10 fixed top-0 left-0'>
+          <h1 className='text-white'>Loading...</h1>
+        </div>
+      }
+      {/* Modal Fail/Success */}
+      <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
           className="fixed inset-0 z-10 overflow-y-auto"
-          onClose={() => { }}
+          onClose={closeModal}
         >
           <div className="min-h-screen px-4 text-center">
             <Transition.Child
@@ -122,7 +135,7 @@ export default function Home() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
+              <Dialog.Overlay className="fixed inset-0" />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -141,16 +154,33 @@ export default function Home() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block justify-center item-center w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                <p className="text-4xl text-black">
-                  Loading...
-                </p>
+              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-gray-300 shadow-xl rounded-2xl">
+                <Dialog.Title
+                  as="h3"
+                  className={`text-lg font-medium leading-6 ${!isError ? 'text-green-600' : 'text-red-500'}`}
+                >
+                  {!isError ? 'Message Sent' : 'Failed to Send Message'}
+                </Dialog.Title>
+                <div className="mt-2">
+                  <p className="text-sm text-gray-700">
+                    {isError ? `Failed to Send Message ${errMsg}` : 'Message sent sucessfully, will get back to you soon as possible'}
+                  </p>
+                </div>
+
+                <div className="mt-4">
+                  <button
+                    type="button"
+                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-gray-500 border border-transparent rounded-md hover:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                    onClick={closeModal}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </Transition.Child>
           </div>
         </Dialog>
       </Transition>
-
     </Fragment>
   )
 }

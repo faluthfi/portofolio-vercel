@@ -60,7 +60,6 @@ export default async (req, res) => {
             });
         });
 
-        console.log(req.headers.host)
         res.status(200).json({ status: "OK" });
     }
     catch (err) {
