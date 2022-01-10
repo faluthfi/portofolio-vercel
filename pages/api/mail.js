@@ -4,10 +4,10 @@ export default async (req, res) => {
     //set variable from body
     const { name, email, subject, message } = req.body
 
-    //Setting up Transponder for connecting to the email
+    //Setting up Transporter for connecting to the email
     const transporter = nodemailer.createTransport({
-        port: 465,
-        host: 'smtp.gmail.com',
+        port: process.env.MAIL_PORT,
+        host: process.env.MAIL_URL,
         auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASSWORD
